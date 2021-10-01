@@ -1,0 +1,24 @@
+default: &default
+   adapter: postgresql
+   encoding: unicode
+  
+development:
+   adapter: postgresql
+   encoding: unicode
+   database: inventory_development
+   username: postgres
+   password: 1234
+
+test:
+   adapter: postgresql
+   encoding: unicode
+   database: inventory_test
+   username: postgres
+   password: 1234
+ 
+production:
+   adapter: postgresql
+   encoding: unicode
+   database: inventory_production
+   username: postgres
+   password: 1234

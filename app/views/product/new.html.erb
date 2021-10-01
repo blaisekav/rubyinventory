@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <%= render 'headmeta' %> 
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <div className="Home">
+     <%= render 'header' %> 
+    <div>
+    <main>
+
+    <div class="row g-8">
+	  <%= render 'sidebar' %> 
+      <div class="col-md-8 col-lg-8 order-md-last">
+      <div>
+      <h1>Add new product</h1>
+      <p>You can add new products using the form shown below</p>
+      <p style="color:green;font-weight:bold;"><% :notice %></p>
+    </div>
+
+
+<%= form_tag :action => 'create' do %>
+
+<label for = "product_name">Name</label>:
+<div class="mb-3 col-4">
+<input class="form-control" type="text" name="products[name]" id="products_name">
+</div>
+
+<label for = "product_description">Description</label>:
+<div class="mb-3 col-4">
+<input class="form-control" type="text" name="products[description]" id="products_description">
+</div>
+
+<label for = "product_price">Price</label>:
+<div class="mb-3 col-4">
+<input class="form-control" type="text" name="products[price]" id="products_price">
+</div>
+
+<!-- <%= submit_tag "Create" %> -->
+
+<input class="btn btn-lg btn-primary btn-block" type="submit" value="create" />
+
+<% end -%>
+
+<div>
+<%= link_to 'Back', {:action => 'list'} %>
+</div>
+
+      </div>
+    </div>
+    </main>
+  </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

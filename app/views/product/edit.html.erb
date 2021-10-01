@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <%= render 'headmeta' %> 
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <div className="Home">
+     <%= render 'header' %> 
+    <div>
+    <main>
+
+    <script>
+    $(document).ready(function() {
+    $('#example').DataTable();
+    } );
+	</script>
+		   <main>
+
+    <div class="row g-8">
+	  <%= render 'sidebar' %> 
+      <div class="col-md-8 col-lg-8 order-md-last">
+      <div>
+      <h1>Product details</h1>
+      <p style="color:green;font-weight:bold;"><% :notice %></p>
+	  </div>
+
+
+      <%= form_for @product, :url =>{:action => "update", :id =>@product} do |f| %>
+      <p>Name: <%= f.text_field  "name" %></p>
+      <p>Description: <%= f.text_field "description" %></p>
+      <p>Price: <%= f.text_field "price" %></p>
+      <%= f.submit "Save changes" %>
+      <% end %>
+
+      <%= link_to "Back", {:action => "list" } %>
+
+     </div>
+    </div>
+    </main>
+  </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
