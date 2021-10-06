@@ -31,17 +31,17 @@
       <%= form_for @product, :url =>{:action => "update", :id =>@product} do |f| %>
       
 	  <label for = "product_name">Name</label>:
-	  <div class="mb-3 col-4">
+	  <div class="mb-3 col-8">
       <input class="form-control" type="text" value=<%= @product.name %> name="product[name]" id="product_name">
       </div>
 	  
 	  <label for = "product_description">Description</label>:
-      <div class="mb-3 col-4">
+      <div class="mb-3 col-8">
       <input class="form-control" type="text" value=<%= @product.description %> name="product[description]" id="product_description">
       </div>
 
        <label for = "product_price">Price</label>:
-      <div class="mb-3 col-4">
+      <div class="mb-3 col-8">
       <input class="form-control" type="number" value=<%= @product.price %> name="product[price]" id="product_price">
       </div>
 	  
