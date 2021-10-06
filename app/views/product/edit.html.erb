@@ -29,9 +29,22 @@
 
 
       <%= form_for @product, :url =>{:action => "update", :id =>@product} do |f| %>
-      <p>Name: <%= f.text_field  "name" %></p>
-      <p>Description: <%= f.text_field "description" %></p>
-      <p>Price: <%= f.text_field "price" %></p>
+      
+	  <label for = "product_name">Name</label>:
+	  <div class="mb-3 col-4">
+      <input class="form-control" type="text" value=<%= @product.name %> name="product[name]" id="product_name">
+      </div>
+	  
+	  <label for = "product_description">Description</label>:
+      <div class="mb-3 col-4">
+      <input class="form-control" type="text" value=<%= @product.description %> name="product[description]" id="product_description">
+      </div>
+
+       <label for = "product_price">Price</label>:
+      <div class="mb-3 col-4">
+      <input class="form-control" type="number" value=<%= @product.price %> name="product[price]" id="product_price">
+      </div>
+	  
       <%= f.submit "Save changes" %>
       <% end %>
 
