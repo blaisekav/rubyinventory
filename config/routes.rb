@@ -11,5 +11,6 @@ Rails.application.routes.draw do
    get 'product/edit'   
    get 'product/delete'
    get 'product/update'
+   get 'product/json_list'
 
 end
