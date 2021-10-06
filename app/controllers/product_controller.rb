@@ -51,7 +51,6 @@ class ProductController < ApplicationController
    
    def delete
       Product.find(params[:id]).destroy 
-	  render :notice => ''
       redirect_to :action => 'list'
    end   
 end
