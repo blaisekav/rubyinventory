@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+@media only screen and (min-width: 768px) {
+.sidebar{
+min-height:100vh !important;
+width: 280px !important;
+}
+.sticky-top {
+border: 1px solid white;
+}
+
+}

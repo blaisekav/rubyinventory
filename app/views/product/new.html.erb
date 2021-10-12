@@ -14,7 +14,7 @@
 
     <div class="row g-8">
 	  <%= render 'sidebar' %> 
-      <div class="form-content col-md-8 col-lg-8 order-md-last">
+      <div class="form-content col-md-8 ml-sm-auto col-lg-8 pt-3 px-4 animate-bottom">
       <div>
       <h1>Add new product</h1>
       <p>You can add new products using the form shown below</p>
@@ -25,7 +25,7 @@
 <%= form_tag :action => 'create' do %>
 
 <label for = "product_name">Name</label>:
-<div class="mb-3 col-8">
+<div class="mb-3 col-md-8">
 <input class="form-control" type="text" name="products[name]" id="products_name">
 </div>
 
